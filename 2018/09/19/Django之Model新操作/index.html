@@ -78,7 +78,7 @@
 
 
 
-  <meta name="keywords" content="opencv," />
+  <meta name="keywords" content="Django, Python, Web," />
 
 
 
@@ -89,28 +89,18 @@
 
 
 
-<meta name="description" content="最近刚开始入门OpenCV，基础版的安装配置过程可以说是无痛的，但是因为后期学习的需要编译安装成了绕不开的步骤。本文主要介绍两种安装方法，配置部分相似我也会详细描述。新手踩坑真的是一条不归路啊~">
-<meta name="keywords" content="opencv">
+<meta name="description" content="写了很长时间的Django了，其简单易上手是一个很大的优点但是往往会让我们忽略一些东西。最近在阅读Django2.0的文档的时候发现了很多新的操作也受到了一些启发，比如接下来我要讲的这个。所谓的Thin VIew Fat Model就是提倡将数据库的操作放在Model里，让View层变得轻便而不像目前我们写的代码几乎所有的包括数据库操作的所有业务代码都放在View层。">
+<meta name="keywords" content="Django, Python, Web">
 <meta property="og:type" content="article">
-<meta property="og:title" content="win10环境下Opencv3+VS2017环境配置">
-<meta property="og:url" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/index.html">
+<meta property="og:title" content="Django之Model新操作">
+<meta property="og:url" content="https://blog.cblueu.cn/2018/09/19/Django之Model新操作/index.html">
 <meta property="og:site_name" content="王照的博客">
-<meta property="og:description" content="最近刚开始入门OpenCV，基础版的安装配置过程可以说是无痛的，但是因为后期学习的需要编译安装成了绕不开的步骤。本文主要介绍两种安装方法，配置部分相似我也会详细描述。新手踩坑真的是一条不归路啊~">
+<meta property="og:description" content="写了很长时间的Django了，其简单易上手是一个很大的优点但是往往会让我们忽略一些东西。最近在阅读Django2.0的文档的时候发现了很多新的操作也受到了一些启发，比如接下来我要讲的这个。所谓的Thin VIew Fat Model就是提倡将数据库的操作放在Model里，让View层变得轻便而不像目前我们写的代码几乎所有的包括数据库操作的所有业务代码都放在View层。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535595488193.png">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535595802473.png">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535596038153.png">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535596465709.png">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535597185631.png">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535597296650.png">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535597836464.png">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535598238173.png">
-<meta property="og:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535598361417.png">
-<meta property="og:updated_time" content="2018-08-30T03:32:30.259Z">
+<meta property="og:updated_time" content="2018-09-19T07:23:08.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="win10环境下Opencv3+VS2017环境配置">
-<meta name="twitter:description" content="最近刚开始入门OpenCV，基础版的安装配置过程可以说是无痛的，但是因为后期学习的需要编译安装成了绕不开的步骤。本文主要介绍两种安装方法，配置部分相似我也会详细描述。新手踩坑真的是一条不归路啊~">
-<meta name="twitter:image" content="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/1535595488193.png">
+<meta name="twitter:title" content="Django之Model新操作">
+<meta name="twitter:description" content="写了很长时间的Django了，其简单易上手是一个很大的优点但是往往会让我们忽略一些东西。最近在阅读Django2.0的文档的时候发现了很多新的操作也受到了一些启发，比如接下来我要讲的这个。所谓的Thin VIew Fat Model就是提倡将数据库的操作放在Model里，让View层变得轻便而不像目前我们写的代码几乎所有的包括数据库操作的所有业务代码都放在View层。">
 
 
 
@@ -140,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/"/>
+  <link rel="canonical" href="https://blog.cblueu.cn/2018/09/19/Django之Model新操作/"/>
 
 
 
 
 
-  <title>win10环境下Opencv3+VS2017环境配置 | 王照的博客</title>
+  <title>Django之Model新操作 | 王照的博客</title>
   
 
 
@@ -280,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">win10环境下Opencv3+VS2017环境配置</h1>
+          <h1 class="post-title" itemprop="name headline">Django之Model新操作</h1>
         
 
         <div class="post-meta">
@@ -292,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T10:05:02+08:00">
-                2018-08-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T14:48:22+08:00">
+                2018-09-19
               </time>
             
 
@@ -324,7 +314,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  695
+                  544
                 </span>
               
 
@@ -340,7 +330,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  2
                 </span>
               
             </div>
@@ -361,45 +351,21 @@
       
 
       
-        <p>最近刚开始入门OpenCV，基础版的安装配置过程可以说是无痛的，但是因为后期学习的需要编译安装成了绕不开的步骤。本文主要介绍两种安装方法，配置部分相似我也会详细描述。新手踩坑真的是一条不归路啊~</p>
-<hr>
+        <p>写了很长时间的Django了，其简单易上手是一个很大的优点但是往往会让我们忽略一些东西。最近在阅读Django2.0的文档的时候发现了很多新的操作也受到了一些启发，比如接下来我要讲的这个。所谓的<code>Thin VIew Fat Model</code>就是提倡将数据库的操作放在Model里，让<code>View</code>层变得轻便而不像目前我们写的代码几乎所有的包括数据库操作的所有业务代码都放在<code>View</code>层。</p>
 <a id="more"></a>
-<h2 id="一、简易版"><a href="#一、简易版" class="headerlink" title="一、简易版"></a>一、简易版</h2><p>之所以说是简易安装版，是因为这种安装方式安装的过程相对简单，对于基本的学习足够。但是很多opencv的模块不会安装，比如后面的目标跟踪模块（tracking）。话不多说，开始~</p>
-<h3 id="1-下载和安装"><a href="#1-下载和安装" class="headerlink" title="1.下载和安装"></a>1.下载和安装</h3><p>1.1 下载网址</p>
-<p>Opencv官网下载（推荐）： <a href="https://opencv.org/releases.html" target="_blank" rel="noopener">https://opencv.org/releases.html</a> </p>
-<p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535595488193.png" alt="图片"></p>
-<p>可以根据实际需求下载相关版本，这里我们选择红色框选的。</p>
-<h4 id="1-2-安装过程"><a href="#1-2-安装过程" class="headerlink" title="1.2 安装过程"></a>1.2 安装过程</h4><p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535595802473.png" alt="图片"></p>
-<h4 id="1-3-安装结束"><a href="#1-3-安装结束" class="headerlink" title="1.3 安装结束"></a>1.3 安装结束</h4><p>安装结束，找到刚才目录下发现有一个opencv 的文件夹被创建。打开出现build和sources文件夹（其他文件请忽略）,继续打开build文件夹，是以下文件结构，到此安装步骤完成。</p>
-<p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535596038153.png" alt="图片"></p>
-<h3 id="2-配置阶段"><a href="#2-配置阶段" class="headerlink" title="2. 配置阶段"></a>2. 配置阶段</h3><h4 id="2-1-配置环境变量"><a href="#2-1-配置环境变量" class="headerlink" title="2.1 配置环境变量"></a>2.1 配置环境变量</h4><p>对于配置各种环境的小伙伴来说这一定不陌生，即使是第一次配置也没有关系。</p>
-<p>介绍一种比较简单直接的方法，通过cmd设置。</p>
-<p>第一步 win+R 输入cmd 按回车</p>
-<p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535596465709.png" alt="图片"></p>
-<p>第二步 <code>setx PATH &quot;%PATH%;############&quot;</code> 将######部分替换成 opencv中的bin文件夹的路径，例如 <code>setx PATH &quot;%PATH%;D:\Program Files\opencv\build\bin&quot;</code> 就ok啦</p>
-<h4 id="2-2-打开vs2017进行配置"><a href="#2-2-打开vs2017进行配置" class="headerlink" title="2.2 打开vs2017进行配置"></a>2.2 打开vs2017进行配置</h4><p>因为这里的配置是针对每一个解决方案的，所以我们要创建一个解决方案（也就是一个项目）</p>
-<p>创建项目之后，依次打开 视图 –&gt; 其他窗口 –&gt; 属性管理器，出现如下界面</p>
-<p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535597185631.png" alt="图片"></p>
-<p>双击这里的项目名称，我这里叫LearnOpenCV，出现以下界面（我只截取了左侧部分图片）</p>
-<p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535597296650.png" alt="图片"></p>
-<p>我们来配置这里的两个部分 <strong>VC++目录、链接器</strong></p>
-<h4 id="2-2-1-VC-目录"><a href="#2-2-1-VC-目录" class="headerlink" title="2.2.1 VC++目录"></a>2.2.1 VC++目录</h4><p>这里面配置如图两个内容</p>
-<p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535597836464.png" alt="图片"></p>
-<p><strong>包含目录</strong>添加 (次序不限)</p>
-<ul>
-<li>[opencv安装目录]\build\include</li>
-<li>[opencv安装目录]\build\include\opencv</li>
-<li>[opencv安装目录]\build\include\opencv2</li>
-</ul>
-<p><strong>库目录</strong>添加(<strong>x86或者x64根据安装目录下的具体情况决定</strong>)</p>
-<ul>
-<li>[opencv安装目录]\build\x86\vc15\lib</li>
-</ul>
-<h4 id="2-2-2-链接器"><a href="#2-2-2-链接器" class="headerlink" title="2.2.2 链接器"></a>2.2.2 链接器</h4><p>链接器–&gt;输入 右边设置附加依赖项，内容是来自于上面添加的库目录下面的文件名</p>
-<p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535598238173.png" alt="图片"></p>
-<p>例如，我的安装目录下有如下文件，那么我就将opencv_world341.lib和opencv_world341d.lib填入其中</p>
-<p><img src="/2018/08/30/Opencv3-VS2017环境配置/1535598361417.png" alt="图片"></p>
-<p>到此简易版安装配置完成，测试代码在最下面，任何问题欢迎直接在右下方留言。</p>
+<p>首先我们来看下面这个表：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    title = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    author = models.CharField(max_length=<span class="number">50</span>)</span><br></pre></td></tr></table></figure>
+<p><code>Book.objects.all()</code>会返回数据库中所有的图书数据，但是当你要查询作者叫做<u>东野圭吾</u>的全部书籍呢？<del>传统的做法</del>（通常的做法）是这么写 <code>Books.objects.filter(title=&quot;东野圭吾&quot;)</code>。但是我们也可以利用<code>Django</code>提供的的另外一种方法——<code>Manager</code>.</p>
+<p>定义如下：</p>
+<blockquote>
+<p>A <code>Manager</code> is the interface through which database query operations are provided to Django models. At least one <code>Manager</code> exists for every model in a Django application.</p>
+</blockquote>
+<p>它是一个接口，主要的作用是可以理解为是一个桥梁，一个为Model和数据库交互的桥梁。</p>
+<p>我们一直使用的<code>Books.object.all()</code>里面的<code>objects</code>其实就是一个默认的<code>Manager</code>,如果写出来那么模型的代码是这样的：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    title = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    author = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">    objects = models.Manager() <span class="comment"># 默认的 manager</span></span><br></pre></td></tr></table></figure>
+<p>既然我们知道它是一个桥梁了，那么我们一定能做点什么，我们来看下面这个例子的做法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AuthorManager</span><span class="params">(models.Manager)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_queryset</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> super().get_queryset().filter(role=<span class="string">'A'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EditorManager</span><span class="params">(models.Manager)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_queryset</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> super().get_queryset().filter(role=<span class="string">'E'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    first_name = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line">    last_name = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line">    role = models.CharField(max_length=<span class="number">1</span>, choices=((<span class="string">'A'</span>, _(<span class="string">'Author'</span>)), (<span class="string">'E'</span>, _(<span class="string">'Editor'</span>))))</span><br><span class="line">    people = models.Manager()</span><br><span class="line">    authors = AuthorManager()</span><br><span class="line">    editors = EditorManager()</span><br></pre></td></tr></table></figure>
+<p>如此你便能轻松的通过 <code>Person.authors.all()， Person.editors.all()，Person.people。all()</code>获得不同的数据信息，极大的减少了<code>View</code>层的代码量并且逻辑清晰。</p>
 
       
     </div>
@@ -426,7 +392,7 @@
       
         <div class="post-tags">
           
-            <a href="../../../../tags/opencv/" rel="tag"># opencv</a>
+            <a href="../../../../tags/Django-Python-Web/" rel="tag"># Django, Python, Web</a>
           
         </div>
       
@@ -439,15 +405,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="../../../08/30/Opencv3-VS2017环境配置/" rel="next" title="win10环境下Opencv3+VS2017环境配置">
+                <i class="fa fa-chevron-left"></i> win10环境下Opencv3+VS2017环境配置
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="../../../09/19/Django之Model新操作/" rel="prev" title="Django之Model新操作">
-                Django之Model新操作 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -499,17 +465,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -580,22 +537,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、简易版"><span class="nav-number">1.</span> <span class="nav-text">一、简易版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载和安装"><span class="nav-number">1.1.</span> <span class="nav-text">1.下载和安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-安装过程"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.2 安装过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-安装结束"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.3 安装结束</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置阶段"><span class="nav-number">1.2.</span> <span class="nav-text">2. 配置阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-配置环境变量"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 配置环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-打开vs2017进行配置"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 打开vs2017进行配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-VC-目录"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.2.1 VC++目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-链接器"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.2.2 链接器</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

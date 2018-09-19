@@ -1,1 +1,1 @@
-https://blog.cblueu.cn/2018/08/30/Opencv3-VS2017环境配置/
+https://blog.cblueu.cn/2018/09/19/Django之Model新操作/
