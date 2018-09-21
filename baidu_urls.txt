@@ -1,1 +1,1 @@
-https://blog.cblueu.cn/2018/09/19/Django之Model新操作/
+https://blog.cblueu.cn/2018/09/22/FRP服务端一键安装和客户端设置教程（一）/
