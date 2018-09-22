@@ -350,20 +350,14 @@
 
       
         
-          
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近主要<del>在学习</del>准备学习视频编码，真是一坑为填又挖一坑。这一次一开始本着拿起IDE就是撸代码的理念去学习彻底翻车，甚至代码都看不懂（心累）。于是决定踏踏实实的看看前辈们走过的路，然后结合实际情况走出自己的路。</p>
-<p>于是误打误撞看到了知乎上面这一篇回答 <a href="https://www.zhihu.com/question/26949947" target="_blank" rel="noopener">学习视频编码、解码知识需要哪些前置知识？</a> 最高票回答中提到了一句话我觉得和我们的需求及其相似——如果你想自己动手改 x264，为其添加一些你想要的东西，那么下面步骤你得耐心走完。走就走呗，咱就骑驴看唱本，走着瞧！</p>
-<blockquote>
-<p>JPEG编码不但要学，还要自己实现，这是图像编码的基础，理解下yuv, dct, 量化，熵编码（不用参考 libjpeg，太庞大，建议参考 tinyjpeg.c，单文件）</p>
-</blockquote>
-<h3 id="什么是编码"><a href="#什么是编码" class="headerlink" title="什么是编码"></a>什么是编码</h3><p>那我们就是从JPEG编码开始讲起，总结一下最近所学。参考视频链接 <a href="https://www.youtube.com/watch?v=n_uNPbdenRs" target="_blank" rel="noopener">JPEG编码—youtube</a></p>
-<p>先从编码讲起，编码（视频、图像）实际上就是指（视频、图片）压缩。压缩的目的在于在保存图像要求信息的基础上最小化数据量，压缩的过程就是编码，压缩的各种方法就是形式多样的编码标准，例如JPEG的编码标准，体现这种标准的文件封装方式即我们平时见到的jpg或者jpeg。换句话说，从若干MB大小的原图变成几百KB大小图片的过程就是编码，例子如QQ互传图片的过程就是压缩或者是编码的过程。</p>
-<h3 id="JPEG编码基本流程"><a href="#JPEG编码基本流程" class="headerlink" title="JPEG编码基本流程"></a>JPEG编码基本流程</h3><p>那么JPEG这个标准到底是怎么实现的呢，其实统观全局脉络十分清晰。画个图看一下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 原始图片</span><br><span class="line">op1=&gt;operation: 变换</span><br><span class="line">op2=&gt;operation: 量化</span><br><span class="line">op3=&gt;operation: 熵编码</span><br><span class="line">e=&gt;end: 输出信息</span><br><span class="line">st-&gt;op1-&gt;op2-&gt;op3-&gt;e</span><br></pre></td></tr></table></figure>
-<p>简单明了，接下的几篇文章将详细介绍每个步骤。</p>
-<p>今天到此结束了！</p>
-
-          
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近主要<del>在学习</del>准备学习视频编码，真是一坑为填又挖一坑。这一次一开始本着拿起IDE就是撸代码的理念去学习彻底翻车，甚至代码都看不懂（心累）。于是决定踏踏实实的看看前辈们走过的路，然后结合实际情况走出自己的路。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="2018/09/22/编码系列（一）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
