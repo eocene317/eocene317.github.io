@@ -78,7 +78,7 @@
 
 
 
-  <meta name="keywords" content="Django, Python, Web," />
+  <meta name="keywords" content="编码," />
 
 
 
@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="写了很长时间的Django了，其简单易上手是一个很大的优点但是往往会让我们忽略一些东西。最近在阅读Django2.0的文档的时候发现了很多新的操作也受到了一些启发，比如接下来我要讲的这个。所谓的Thin VIew Fat Model就是提倡将数据库的操作放在Model里，让View层变得轻便而不像目前我们写的代码几乎所有的包括数据库操作的所有业务代码都放在View层。">
-<meta name="keywords" content="Django, Python, Web">
+<meta name="description" content="前言最近主要在学习准备学习视频编码，真是一坑为填又挖一坑。这一次一开始本着拿起IDE就是撸代码的理念去学习彻底翻车，甚至代码都看不懂（心累）。于是决定踏踏实实的看看前辈们走过的路，然后结合实际情况走出自己的路。 于是误打误撞看到了知乎上面这一篇回答 学习视频编码、解码知识需要哪些前置知识？ 最高票回答中提到了一句话我觉得和我们的需求及其相似——如果你想自己动手改 x264，为其添加一些你想要的东西">
+<meta name="keywords" content="编码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Django之Model新操作">
-<meta property="og:url" content="https://blog.cblueu.cn/2018/09/19/Django之Model新操作/index.html">
+<meta property="og:title" content="编码系列（一）">
+<meta property="og:url" content="https://blog.cblueu.cn/2018/09/22/编码系列（一）/index.html">
 <meta property="og:site_name" content="王照的博客">
-<meta property="og:description" content="写了很长时间的Django了，其简单易上手是一个很大的优点但是往往会让我们忽略一些东西。最近在阅读Django2.0的文档的时候发现了很多新的操作也受到了一些启发，比如接下来我要讲的这个。所谓的Thin VIew Fat Model就是提倡将数据库的操作放在Model里，让View层变得轻便而不像目前我们写的代码几乎所有的包括数据库操作的所有业务代码都放在View层。">
+<meta property="og:description" content="前言最近主要在学习准备学习视频编码，真是一坑为填又挖一坑。这一次一开始本着拿起IDE就是撸代码的理念去学习彻底翻车，甚至代码都看不懂（心累）。于是决定踏踏实实的看看前辈们走过的路，然后结合实际情况走出自己的路。 于是误打误撞看到了知乎上面这一篇回答 学习视频编码、解码知识需要哪些前置知识？ 最高票回答中提到了一句话我觉得和我们的需求及其相似——如果你想自己动手改 x264，为其添加一些你想要的东西">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-19T07:23:08.464Z">
+<meta property="og:updated_time" content="2018-09-22T12:35:48.469Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django之Model新操作">
-<meta name="twitter:description" content="写了很长时间的Django了，其简单易上手是一个很大的优点但是往往会让我们忽略一些东西。最近在阅读Django2.0的文档的时候发现了很多新的操作也受到了一些启发，比如接下来我要讲的这个。所谓的Thin VIew Fat Model就是提倡将数据库的操作放在Model里，让View层变得轻便而不像目前我们写的代码几乎所有的包括数据库操作的所有业务代码都放在View层。">
+<meta name="twitter:title" content="编码系列（一）">
+<meta name="twitter:description" content="前言最近主要在学习准备学习视频编码，真是一坑为填又挖一坑。这一次一开始本着拿起IDE就是撸代码的理念去学习彻底翻车，甚至代码都看不懂（心累）。于是决定踏踏实实的看看前辈们走过的路，然后结合实际情况走出自己的路。 于是误打误撞看到了知乎上面这一篇回答 学习视频编码、解码知识需要哪些前置知识？ 最高票回答中提到了一句话我觉得和我们的需求及其相似——如果你想自己动手改 x264，为其添加一些你想要的东西">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.cblueu.cn/2018/09/19/Django之Model新操作/"/>
+  <link rel="canonical" href="https://blog.cblueu.cn/2018/09/22/编码系列（一）/"/>
 
 
 
 
 
-  <title>Django之Model新操作 | 王照的博客</title>
+  <title>编码系列（一） | 王照的博客</title>
   
 
 
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Django之Model新操作</h1>
+          <h1 class="post-title" itemprop="name headline">编码系列（一）</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T14:48:22+08:00">
-                2018-09-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-22T19:39:07+08:00">
+                2018-09-22
               </time>
             
 
@@ -314,7 +314,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  544
+                  553
                 </span>
               
 
@@ -351,21 +351,17 @@
       
 
       
-        <p>写了很长时间的Django了，其简单易上手是一个很大的优点但是往往会让我们忽略一些东西。最近在阅读Django2.0的文档的时候发现了很多新的操作也受到了一些启发，比如接下来我要讲的这个。所谓的<code>Thin VIew Fat Model</code>就是提倡将数据库的操作放在Model里，让<code>View</code>层变得轻便而不像目前我们写的代码几乎所有的包括数据库操作的所有业务代码都放在<code>View</code>层。</p>
-<a id="more"></a>
-<p>首先我们来看下面这个表：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    title = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    author = models.CharField(max_length=<span class="number">50</span>)</span><br></pre></td></tr></table></figure>
-<p><code>Book.objects.all()</code>会返回数据库中所有的图书数据，但是当你要查询作者叫做<u>东野圭吾</u>的全部书籍呢？<del>传统的做法</del>（通常的做法）是这么写 <code>Books.objects.filter(title=&quot;东野圭吾&quot;)</code>。但是我们也可以利用<code>Django</code>提供的的另外一种方法——<code>Manager</code>.</p>
-<p>定义如下：</p>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近主要<del>在学习</del>准备学习视频编码，真是一坑为填又挖一坑。这一次一开始本着拿起IDE就是撸代码的理念去学习彻底翻车，甚至代码都看不懂（心累）。于是决定踏踏实实的看看前辈们走过的路，然后结合实际情况走出自己的路。</p>
+<p>于是误打误撞看到了知乎上面这一篇回答 <a href="https://www.zhihu.com/question/26949947" target="_blank" rel="noopener">学习视频编码、解码知识需要哪些前置知识？</a> 最高票回答中提到了一句话我觉得和我们的需求及其相似——如果你想自己动手改 x264，为其添加一些你想要的东西，那么下面步骤你得耐心走完。走就走呗，咱就骑驴看唱本，走着瞧！</p>
 <blockquote>
-<p>A <code>Manager</code> is the interface through which database query operations are provided to Django models. At least one <code>Manager</code> exists for every model in a Django application.</p>
+<p>JPEG编码不但要学，还要自己实现，这是图像编码的基础，理解下yuv, dct, 量化，熵编码（不用参考 libjpeg，太庞大，建议参考 tinyjpeg.c，单文件）</p>
 </blockquote>
-<p>它是一个接口，主要的作用是可以理解为是一个桥梁，一个为Model和数据库交互的桥梁。</p>
-<p>我们一直使用的<code>Books.object.all()</code>里面的<code>objects</code>其实就是一个默认的<code>Manager</code>,如果写出来那么模型的代码是这样的：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    title = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    author = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">    objects = models.Manager() <span class="comment"># 默认的 manager</span></span><br></pre></td></tr></table></figure>
-<p>既然我们知道它是一个桥梁了，那么我们一定能做点什么，我们来看下面这个例子的做法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AuthorManager</span><span class="params">(models.Manager)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_queryset</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> super().get_queryset().filter(role=<span class="string">'A'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EditorManager</span><span class="params">(models.Manager)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_queryset</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> super().get_queryset().filter(role=<span class="string">'E'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    first_name = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line">    last_name = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line">    role = models.CharField(max_length=<span class="number">1</span>, choices=((<span class="string">'A'</span>, _(<span class="string">'Author'</span>)), (<span class="string">'E'</span>, _(<span class="string">'Editor'</span>))))</span><br><span class="line">    people = models.Manager()</span><br><span class="line">    authors = AuthorManager()</span><br><span class="line">    editors = EditorManager()</span><br></pre></td></tr></table></figure>
-<p>如此你便能轻松的通过 <code>Person.authors.all()， Person.editors.all()，Person.people。all()</code>获得不同的数据信息，极大的减少了<code>View</code>层的代码量并且逻辑清晰。</p>
+<h3 id="什么是编码"><a href="#什么是编码" class="headerlink" title="什么是编码"></a>什么是编码</h3><p>那我们就是从JPEG编码开始讲起，总结一下最近所学。参考视频链接 <a href="https://www.youtube.com/watch?v=n_uNPbdenRs" target="_blank" rel="noopener">JPEG编码—youtube</a></p>
+<p>先从编码讲起，编码（视频、图像）实际上就是指（视频、图片）压缩。压缩的目的在于在保存图像要求信息的基础上最小化数据量，压缩的过程就是编码，压缩的各种方法就是形式多样的编码标准，例如JPEG的编码标准，体现这种标准的文件封装方式即我们平时见到的jpg或者jpeg。换句话说，从若干MB大小的原图变成几百KB大小图片的过程就是编码，例子如QQ互传图片的过程就是压缩或者是编码的过程。</p>
+<h3 id="JPEG编码基本流程"><a href="#JPEG编码基本流程" class="headerlink" title="JPEG编码基本流程"></a>JPEG编码基本流程</h3><p>那么JPEG这个标准到底是怎么实现的呢，其实统观全局脉络十分清晰。画个图看一下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 原始图片</span><br><span class="line">op1=&gt;operation: 变换</span><br><span class="line">op2=&gt;operation: 量化</span><br><span class="line">op3=&gt;operation: 熵编码</span><br><span class="line">e=&gt;end: 输出信息</span><br><span class="line">st-&gt;op1-&gt;op2-&gt;op3-&gt;e</span><br></pre></td></tr></table></figure>
+<p>简单明了，接下的几篇文章将详细介绍每个步骤。</p>
+<p>今天到此结束了！</p>
 
       
     </div>
@@ -392,7 +388,7 @@
       
         <div class="post-tags">
           
-            <a href="../../../../tags/Django-Python-Web/" rel="tag"># Django, Python, Web</a>
+            <a href="../../../../tags/编码/" rel="tag"># 编码</a>
           
         </div>
       
@@ -405,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="../../../08/30/Opencv3-VS2017环境配置/" rel="next" title="win10环境下Opencv3+VS2017环境配置">
-                <i class="fa fa-chevron-left"></i> win10环境下Opencv3+VS2017环境配置
+              <a href="../FRP服务端一键安装和客户端设置教程（二）/" rel="next" title="FRP服务端一键安装和客户端设置教程（二）">
+                <i class="fa fa-chevron-left"></i> FRP服务端一键安装和客户端设置教程（二）
               </a>
             
           </div>
@@ -414,10 +410,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="../../22/FRP服务端一键安装和客户端设置教程（一）/" rel="prev" title="FRP服务端一键安装和客户端设置教程（一）">
-                FRP服务端一键安装和客户端设置教程（一） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -541,6 +542,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是编码"><span class="nav-number">2.</span> <span class="nav-text">什么是编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JPEG编码基本流程"><span class="nav-number">3.</span> <span class="nav-text">JPEG编码基本流程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

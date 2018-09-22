@@ -1,1 +1,1 @@
-https://blog.cblueu.cn/2018/09/22/FRP服务端一键安装和客户端设置教程（二）/
+https://blog.cblueu.cn/2018/09/22/编码系列（一）/
